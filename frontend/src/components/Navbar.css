@@ -1,27 +1,17 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #4f46e5;
-  padding: 15px 30px;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  padding: 15px;
+  text-align: center;
 }
 
-.logo {
-  color: white;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
+.navbar a {
   color: white;
   text-decoration: none;
+  margin: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+.navbar a:hover {
+  color: yellow;
 }

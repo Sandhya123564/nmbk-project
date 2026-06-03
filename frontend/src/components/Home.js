@@ -2,37 +2,82 @@ function Home() {
   return (
     <div
       style={{
-        background: "linear-gradient(135deg, #1e3c72, #2a5298)",
         minHeight: "100vh",
-        padding: "40px",
+        background: "linear-gradient(135deg,#1e3c72,#2a5298)",
+        color: "white",
         textAlign: "center",
-        color: "white"
+        padding: "50px"
       }}
     >
-      <h1>🌸 Welcome to NMBK Cultural Activities 🌸</h1>
+      <h1 style={{ fontSize: "45px" }}>
+        🌸 NMBK Cultural Activities 🌸
+      </h1>
 
-      <p>
-        NMBK provides cultural and wellness activities including
-        Bharatanatyam, Yoga and Bhajan.
+      <p style={{ fontSize: "22px" }}>
+        Explore Culture, Wellness and Spiritual Growth
       </p>
+
+      <button
+        style={{
+          padding: "12px 25px",
+          border: "none",
+          borderRadius: "8px",
+          background: "#ff9800",
+          color: "white",
+          fontSize: "18px",
+          cursor: "pointer"
+        }}
+      >
+        Explore Activities
+      </button>
 
       <div
         style={{
-          background: "white",
-          color: "#003366",
-          padding: "20px",
-          borderRadius: "15px",
-          width: "80%",
-          margin: "20px auto",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.3)"
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          marginTop: "50px",
+          flexWrap: "wrap"
         }}
       >
-        <h2>Our Mission</h2>
+        <div
+          style={{
+            background: "white",
+            color: "#003366",
+            padding: "20px",
+            borderRadius: "15px",
+            width: "250px"
+          }}
+        >
+          <h2>💃 Bharatanatyam</h2>
+          <p>Classical dance expressing culture and tradition.</p>
+        </div>
 
-        <p>
-          To encourage students to participate in cultural,
-          spiritual and wellness activities.
-        </p>
+        <div
+          style={{
+            background: "white",
+            color: "#003366",
+            padding: "20px",
+            borderRadius: "15px",
+            width: "250px"
+          }}
+        >
+          <h2>🧘 Yoga</h2>
+          <p>Improve physical and mental well-being.</p>
+        </div>
+
+        <div
+          style={{
+            background: "white",
+            color: "#003366",
+            padding: "20px",
+            borderRadius: "15px",
+            width: "250px"
+          }}
+        >
+          <h2>🎵 Bhajan</h2>
+          <p>Spiritual devotion through music and prayer.</p>
+        </div>
       </div>
     </div>
   );

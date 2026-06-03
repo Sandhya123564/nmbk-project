@@ -1,37 +1,13 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  min-height: 100vh;
-}
-
-.App {
-  text-align: center;
-}
-
-h1 {
-  color: #ffffff;
-  font-size: 36px;
-}
-
-p {
-  color: #ffffff;
-  font-size: 18px;
-}
-
 .card {
-  background: rgba(255,255,255,0.2);
-  margin: 20px auto;
+  background: white;
   padding: 20px;
-  width: 80%;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 20px auto;
+  width: 80%;
 }
 
-button {
-  background: #ff9800;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
 }

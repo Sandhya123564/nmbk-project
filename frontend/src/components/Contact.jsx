@@ -1,13 +1,11 @@
-import React from "react";
-
 function Contact() {
   return (
-    <div style={{padding:"40px"}}>
+    <div className="card">
       <h1>Contact Us</h1>
 
-      <p>Email: servernmbk@gmail.com</p>
-      <p>Phone: +49 15901140879</p>
-      <p>Address: NMBK Company</p>
+      <p>📧 Email: servernmbk@gmail.com</p>
+      <p>📞 Phone: +91 9876543210</p>
+      <p>📍 Address: NMBK Cultural Center</p>
     </div>
   );
 }

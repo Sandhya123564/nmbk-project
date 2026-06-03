@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f8fb;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
 }
 
 .App {
@@ -9,30 +10,28 @@ body {
 }
 
 h1 {
-  color: #003366;
+  color: #ffffff;
+  font-size: 36px;
 }
 
 p {
-  color: #444;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 .card {
-  background: white;
+  background: rgba(255,255,255,0.2);
   margin: 20px auto;
   padding: 20px;
   width: 80%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
 
 button {
-  background: #0077cc;
+  background: #ff9800;
   color: white;
-  border: none;
   padding: 10px 20px;
-  border-radius: 5px;
-}
-
-button:hover {
-  background: #005fa3;
+  border: none;
+  border-radius: 8px;
 }

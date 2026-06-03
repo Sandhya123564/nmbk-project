@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Enrichment from "./components/Enrichment";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (

@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Enrichment from "./components/Enrichment";
 import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer";<Footer />
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/enrichment" element={<Enrichment />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <footer/>
     </Router>
   );
 }

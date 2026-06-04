@@ -3,10 +3,30 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav style={{ padding: "15px", background: "#222" }}>
-      <Link to="/" style={{ color: "white", marginRight: "15px" }}>Home</Link>
-      <Link to="/enrichment" style={{ color: "white", marginRight: "15px" }}>Enrichment</Link>
-      <Link to="/contact" style={{ color: "white" }}>Contact</Link>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "20px 50px",
+        background: "#0f172a"
+      }}
+    >
+      <h2 style={{ color: "white" }}>NMBK</h2>
+
+      <div>
+        <Link to="/" style={{ color: "white", margin: "15px" }}>
+          Home
+        </Link>
+
+        <Link to="/enrichment" style={{ color: "white", margin: "15px" }}>
+          Activities
+        </Link>
+
+        <Link to="/contact" style={{ color: "white", margin: "15px" }}>
+          Contact
+        </Link>
+      </div>
     </nav>
   );
 }

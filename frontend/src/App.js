@@ -4,19 +4,21 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Enrichment from "./components/Enrichment";
-import Contact from "./components/Contact.jsx";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/enrichment" element={<Enrichment />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <footer/>
+
+      <Footer />
     </Router>
   );
 }

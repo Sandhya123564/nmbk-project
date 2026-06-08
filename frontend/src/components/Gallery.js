@@ -37,6 +37,14 @@ function Gallery() {
           alt="Bhajan"
           style={{ width: "250px", borderRadius: "10px" }}
         />
+        <div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "20px",
+    marginTop: "30px"
+  }}
+></div>
       </div>
     </div>
   );

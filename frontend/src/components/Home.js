@@ -1,3 +1,5 @@
+import React from "react";
+
 function Home() {
   return (
     <div>
@@ -14,7 +16,13 @@ function Home() {
           NMBK Cultural Activities
         </h1>
 
-        <p style={{ fontSize: "24px", maxWidth: "700px", margin: "auto" }}>
+        <p
+          style={{
+            fontSize: "24px",
+            maxWidth: "700px",
+            margin: "auto"
+          }}
+        >
           Explore Culture, Wellness and Spiritual Growth through
           Bharatanatyam, Yoga and Bhajan activities.
         </p>
@@ -27,7 +35,8 @@ function Home() {
             color: "white",
             border: "none",
             borderRadius: "8px",
-            fontSize: "18px"
+            fontSize: "18px",
+            cursor: "pointer"
           }}
         >
           Explore Activities
@@ -93,12 +102,43 @@ function Home() {
           background: "white"
         }}
       >
-        <h2 style={{ color: "#1e3c72" }}>Why Choose NMBK?</h2>
+        <h2
+          style={{
+            color: "#1e3c72",
+            fontSize: "36px"
+          }}
+        >
+          Why Choose NMBK?
+        </h2>
 
-        <p>✓ Cultural Development</p>
-        <p>✓ Wellness Activities</p>
-        <p>✓ Spiritual Growth</p>
-        <p>✓ Student Engagement</p>
+        <p
+          style={{
+            maxWidth: "700px",
+            margin: "20px auto",
+            fontSize: "18px",
+            color: "#444"
+          }}
+        >
+          We combine Culture, Wellness and Technology to help
+          students learn, grow and express their creativity.
+        </p>
+      </div>
+
+      {/* Vision Section */}
+      <div
+        style={{
+          background: "#1e3c72",
+          color: "white",
+          textAlign: "center",
+          padding: "60px 20px"
+        }}
+      >
+        <h2>Our Vision</h2>
+        <p style={{ maxWidth: "700px", margin: "20px auto" }}>
+          At NMBK, we believe technology should amplify creativity,
+          preserve culture and build meaningful connections across
+          communities.
+        </p>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Enrichment from "./components/Enrichment";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import VideoEditing from "./components/VideoEditing";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/enrichment" element={<Enrichment />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/video-editing" element={<VideoEditing />} />
       </Routes>
 
       <Footer />

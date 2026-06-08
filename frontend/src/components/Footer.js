@@ -1,15 +1,22 @@
+import React from "react";
+
 function Footer() {
   return (
     <footer
       style={{
-        background: "#1e3c72",
+        background: "#0f172a",
         color: "white",
         textAlign: "center",
-        padding: "15px",
-        marginTop: "20px"
+        padding: "30px"
       }}
     >
-      © 2026 NMBK Cultural Activities | All Rights Reserved
+      <h3>NMBK Cultural Activities</h3>
+
+      <p>Technology • Art • Culture • Wellness</p>
+
+      <p>Home | Enrichment | Contact</p>
+
+      <p>© 2026 NMBK. All Rights Reserved.</p>
     </footer>
   );
 }

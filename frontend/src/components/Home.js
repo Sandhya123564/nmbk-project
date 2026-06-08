@@ -140,6 +140,112 @@ function Home() {
           communities.
         </p>
       </div>
+      {/* Statistics Section */}
+<div
+  style={{
+    background: "#f8fafc",
+    padding: "60px 20px",
+    textAlign: "center"
+  }}
+>
+  <h2 style={{ color: "#1e3c72" }}>Our Impact</h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "50px",
+      flexWrap: "wrap",
+      marginTop: "20px"
+    }}
+  >
+    <div>
+      <h1 style={{ color: "#ff9800" }}>500+</h1>
+      <p>Students</p>
+    </div>
+
+    <div>
+      <h1 style={{ color: "#ff9800" }}>50+</h1>
+      <p>Programs</p>
+    </div>
+
+    <div>
+      <h1 style={{ color: "#ff9800" }}>100+</h1>
+      <p>Learning Hours</p>
+    </div>
+  </div>
+</div>
+{/* Testimonials */}
+<div
+  style={{
+    padding: "60px 20px",
+    textAlign: "center",
+    background: "white"
+  }}
+>
+  <h2 style={{ color: "#1e3c72" }}>Testimonials</h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "20px",
+      flexWrap: "wrap"
+    }}
+  >
+    <div
+      style={{
+        background: "#f8fafc",
+        padding: "20px",
+        width: "300px",
+        borderRadius: "10px"
+      }}
+    >
+      <p>"The Bharatanatyam classes helped me connect with my roots."</p>
+      <b>- Student</b>
+    </div>
+
+    <div
+      style={{
+        background: "#f8fafc",
+        padding: "20px",
+        width: "300px",
+        borderRadius: "10px"
+      }}
+    >
+      <p>"Excellent cultural and wellness programs."</p>
+      <b>- Parent</b>
+    </div>
+  </div>
+</div>
+{/* Featured Activities */}
+<div
+  style={{
+    background: "#1e3c72",
+    color: "white",
+    textAlign: "center",
+    padding: "60px 20px"
+  }}
+>
+  <h2>Featured Activities</h2>
+
+  <p>💃 Bharatanatyam</p>
+  <p>🧘 Yoga & Meditation</p>
+  <p>🎵 Bhajan & Devotional Music</p>
+  <p>🎬 Video Editing</p>
+</div>
+{/* Announcements */}
+<div
+  style={{
+    background: "#ff9800",
+    color: "white",
+    textAlign: "center",
+    padding: "30px"
+  }}
+>
+  <h2>Announcements</h2>
+  <p>Admissions Open for Cultural & Wellness Programs 2026</p>
+</div>
     </div>
   );
 }

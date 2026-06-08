@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/image.png";
 
 function Navbar() {
   return (
@@ -12,26 +13,34 @@ function Navbar() {
         background: "#0f172a"
       }}
     >
-      <h2 style={{ color: "white" }}>NMBK</h2>
+      {/* Logo */}
+      <img
+        src={logo}
+        alt="NMBK Logo"
+        style={{ height: "60px" }}
+      />
 
+      {/* Navigation Links */}
       <div>
         <Link to="/" style={{ color: "white", margin: "15px" }}>
           Home
         </Link>
+
         <Link to="/about" style={{ color: "white", margin: "15px" }}>
-  About
-</Link>
+          About
+        </Link>
 
         <Link to="/enrichment" style={{ color: "white", margin: "15px" }}>
           Activities
         </Link>
-        <Link to="/video-editing" style={{ color: "white", margin: "15px" }}>
-  Video Editing
-</Link>
-<Link to="/gallery" style={{ color: "white", margin: "15px" }}>
-  Gallery
-</Link>
 
+        <Link to="/video-editing" style={{ color: "white", margin: "15px" }}>
+          Video Editing
+        </Link>
+
+        <Link to="/gallery" style={{ color: "white", margin: "15px" }}>
+          Gallery
+        </Link>
 
         <Link to="/contact" style={{ color: "white", margin: "15px" }}>
           Contact

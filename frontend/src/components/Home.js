@@ -302,6 +302,62 @@ function Home() {
     </div>
   </div>
 </div>
+{/* Our Team */}
+<div
+  style={{
+    padding: "60px 20px",
+    textAlign: "center",
+    background: "white"
+  }}
+>
+  <h2 style={{ color: "#1e3c72" }}>Our Team</h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "20px",
+      flexWrap: "wrap",
+      marginTop: "20px"
+    }}
+  >
+    <div
+      style={{
+        background: "#f8fafc",
+        padding: "20px",
+        borderRadius: "10px",
+        width: "250px"
+      }}
+    >
+      <h3>Program Coordinator</h3>
+      <p>Managing cultural and wellness activities.</p>
+    </div>
+
+    <div
+      style={{
+        background: "#f8fafc",
+        padding: "20px",
+        borderRadius: "10px",
+        width: "250px"
+      }}
+    >
+      <h3>Yoga Trainer</h3>
+      <p>Guiding students in health and mindfulness.</p>
+    </div>
+
+    <div
+      style={{
+        background: "#f8fafc",
+        padding: "20px",
+        borderRadius: "10px",
+        width: "250px"
+      }}
+    >
+      <h3>Cultural Mentor</h3>
+      <p>Supporting dance, music and creative activities.</p>
+    </div>
+  </div>
+</div>
     </div>
   );
 }

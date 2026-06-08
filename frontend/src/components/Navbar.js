@@ -18,6 +18,9 @@ function Navbar() {
         <Link to="/" style={{ color: "white", margin: "15px" }}>
           Home
         </Link>
+        <Link to="/about" style={{ color: "white", margin: "15px" }}>
+  About
+</Link>
 
         <Link to="/enrichment" style={{ color: "white", margin: "15px" }}>
           Activities
@@ -28,6 +31,7 @@ function Navbar() {
 <Link to="/gallery" style={{ color: "white", margin: "15px" }}>
   Gallery
 </Link>
+
 
         <Link to="/contact" style={{ color: "white", margin: "15px" }}>
           Contact

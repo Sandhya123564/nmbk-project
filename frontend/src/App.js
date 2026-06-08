@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import VideoEditing from "./components/VideoEditing";
 import Gallery from "./components/Gallery";
+import About from "./components/About";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/video-editing" element={<VideoEditing />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<About />} />
       </Routes>
 
       <Footer />

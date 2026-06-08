@@ -25,6 +25,9 @@ function Navbar() {
         <Link to="/video-editing" style={{ color: "white", margin: "15px" }}>
   Video Editing
 </Link>
+<Link to="/gallery" style={{ color: "white", margin: "15px" }}>
+  Gallery
+</Link>
 
         <Link to="/contact" style={{ color: "white", margin: "15px" }}>
           Contact

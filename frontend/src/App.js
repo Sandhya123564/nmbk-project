@@ -7,6 +7,7 @@ import Enrichment from "./components/Enrichment";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import VideoEditing from "./components/VideoEditing";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/enrichment" element={<Enrichment />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/video-editing" element={<VideoEditing />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
 
       <Footer />

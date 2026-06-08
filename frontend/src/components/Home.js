@@ -246,6 +246,62 @@ function Home() {
   <h2>Announcements</h2>
   <p>Admissions Open for Cultural & Wellness Programs 2026</p>
 </div>
+{/* Upcoming Events */}
+<div
+  style={{
+    padding: "60px 20px",
+    textAlign: "center",
+    background: "#f8fafc"
+  }}
+>
+  <h2 style={{ color: "#1e3c72" }}>Upcoming Events</h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "20px",
+      flexWrap: "wrap",
+      marginTop: "20px"
+    }}
+  >
+    <div
+      style={{
+        background: "white",
+        padding: "20px",
+        borderRadius: "10px",
+        width: "250px"
+      }}
+    >
+      <h3>🧘 Yoga Workshop</h3>
+      <p>Learn mindfulness and wellness techniques.</p>
+    </div>
+
+    <div
+      style={{
+        background: "white",
+        padding: "20px",
+        borderRadius: "10px",
+        width: "250px"
+      }}
+    >
+      <h3>💃 Bharatanatyam Performance</h3>
+      <p>Showcase of classical dance talents.</p>
+    </div>
+
+    <div
+      style={{
+        background: "white",
+        padding: "20px",
+        borderRadius: "10px",
+        width: "250px"
+      }}
+    >
+      <h3>🎵 Bhajan Competition</h3>
+      <p>Spiritual music and devotional singing.</p>
+    </div>
+  </div>
+</div>
     </div>
   );
 }

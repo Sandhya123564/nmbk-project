@@ -2,7 +2,14 @@ import React from "react";
 
 function Services() {
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
+    <div
+  style={{
+    minHeight: "100vh",
+    background: "#f8fafc",
+    padding: "40px",
+    textAlign: "center"
+  }}
+>
       <h1>Our Services</h1>
      <p
   style={{

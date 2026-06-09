@@ -25,7 +25,13 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div
+  style={{
+    minHeight: "100vh",
+    background: "#f8fafc",
+    padding: "40px"
+  }}
+>
       <h2>Contact Us</h2>
 
       <form onSubmit={handleSubmit}>

@@ -2,7 +2,14 @@ import React from "react";
 
 function VideoEditing() {
   return (
-    <div style={{ padding: "50px", textAlign: "center" }}>
+    <div
+  style={{
+    minHeight: "100vh",
+    background: "#f8fafc",
+    padding: "40px",
+    textAlign: "center"
+  }}
+>
       <h1>🎬 Video Editing</h1>
 
       <p>

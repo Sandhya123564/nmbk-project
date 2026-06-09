@@ -2,7 +2,13 @@ import React from "react";
 
 function About() {
   return (
-    <div style={{ padding: "50px", textAlign: "center" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#f8fafc",
+        padding: "40px"
+      }}
+    >
       <h1>About NMBK</h1>
 
       <p>

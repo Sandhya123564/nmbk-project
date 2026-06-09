@@ -6,7 +6,14 @@ import bhajan from "../assets/images/bhajan.jpg";
 
 function Gallery() {
   return (
-    <div style={{ padding: "50px", textAlign: "center" }}>
+    <div
+  style={{
+    minHeight: "100vh",
+    background: "#f8fafc",
+    padding: "40px",
+    textAlign: "center"
+  }}
+>
       <h1>Gallery</h1>
 
       <p>Our Cultural and Wellness Activities</p>

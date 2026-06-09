@@ -2,7 +2,13 @@ import React from "react";
 
 function Classes() {
   return (
-    <div style={{ padding: "40px" }}>
+    <div
+  style={{
+    minHeight: "100vh",
+    background: "#f8fafc",
+    padding: "40px"
+  }}
+>
       <h1 style={{ textAlign: "center" }}>
         NMBK Classes & Schedule
       </h1>

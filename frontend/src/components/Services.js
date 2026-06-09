@@ -4,6 +4,7 @@ function Services() {
   return (
     <div style={{ padding: "40px", textAlign: "center" }}>
       <h1>Our Services</h1>
+      NMBK - A Cultural Academy, Creative Technology Studio and Community Platform.
 
       <div style={{
         display: "flex",
@@ -12,7 +13,6 @@ function Services() {
         flexWrap: "wrap",
         marginTop: "30px"
       }}>
-        NMBK - A Cultural Academy, Creative Technology Studio and Community Platform.
 
         <div style={{
           background: "#f5f5f5",

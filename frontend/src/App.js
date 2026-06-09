@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import VideoEditing from "./components/VideoEditing";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
+import Classes from "./components/Classes";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/video-editing" element={<VideoEditing />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
+        <Route path="/classes" element={<Classes />} />
       </Routes>
 
       <Footer />

@@ -10,7 +10,7 @@ import VideoEditing from "./components/VideoEditing";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Classes from "./components/Classes";
-
+import Services from "./components/Services";
 function App() {
   return (
     <Router>
@@ -24,6 +24,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/classes" element={<Classes />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
 
       <Footer />

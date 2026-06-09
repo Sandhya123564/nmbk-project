@@ -32,6 +32,9 @@ function Navbar() {
         <Link to="/classes" style={{ color: "white", margin: "15px" }}>
   Classes
 </Link>
+<Link to="/services" style={{ color: "white", margin: "15px" }}>
+  Services
+</Link>
 
         <Link to="/enrichment" style={{ color: "white", margin: "15px" }}>
           Activities

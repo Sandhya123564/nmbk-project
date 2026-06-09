@@ -19,6 +19,7 @@ function Services() {
           borderRadius: "10px",
           width: "250px"
         }}>
+            NMBK - A Cultural Academy, Creative Technology Studio and Community Platform.
           <h2>🌐 Websites for Artists</h2>
           <p>Professional websites for dancers, musicians and performers.</p>
         </div>

@@ -358,6 +358,35 @@ function Home() {
     </div>
   </div>
 </div>
+<div
+  style={{
+    background: "#1e3c72",
+    color: "white",
+    textAlign: "center",
+    padding: "50px",
+    marginTop: "40px"
+  }}
+>
+  <h2>Start Your Cultural Journey with NMBK</h2>
+
+  <p>
+    Join our Yoga, Bharatanatyam and Bhajan classes
+    and become part of our creative community.
+  </p>
+
+  <button
+    style={{
+      padding: "12px 25px",
+      background: "#ff9800",
+      color: "white",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer"
+    }}
+  >
+    Register Now
+  </button>
+</div>
     </div>
   );
 }

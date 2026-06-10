@@ -349,6 +349,7 @@ function Home() {
       <h3>Yoga Trainer</h3>
       <p>Guiding students in health and mindfulness.</p>
     </div>
+    
 
     <div
       style={{

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Classes() {
   return (
@@ -39,7 +40,9 @@ function Classes() {
           <b>Suitable For:</b> Beginners, Intermediate, Adults
         </p>
 
-        <button>Join Yoga Classes</button>
+        <Link to="/contact">
+  <button>Join Yoga Classes</button>
+</Link>
       </div>
 
       {/* Bharatanatyam */}
@@ -68,7 +71,9 @@ function Classes() {
           <b>Suitable For:</b> Children, Teens, Adults
         </p>
 
-        <button>Enroll in Bharatanatyam</button>
+        <Link to="/contact">
+  <button>Enroll in Bharatanatyam</button>
+</Link>
       </div>
 
       {/* Bhajan */}
@@ -96,7 +101,9 @@ function Classes() {
           <b>Suitable For:</b> Children, Adults, Families
         </p>
 
-        <button>Join Music Classes</button>
+        <Link to="/contact">
+  <button>Join Music Classes</button>
+</Link>
       </div>
 
       {/* Weekly Schedule */}
@@ -171,23 +178,32 @@ function Classes() {
         <br />
         <br />
 
-        <button>Request Information</button>
+        <Link to="/contact">
+  <button>Request Information</button>
+</Link>
       </div>
 
-      {/* WhatsApp */}
-      <div style={{ textAlign: "center", marginTop: "30px" }}>
-        <button
-          style={{
-            padding: "12px 25px",
-            background: "green",
-            color: "white",
-            border: "none",
-            borderRadius: "8px"
-          }}
-        >
-          📱 Contact on WhatsApp
-        </button>
-      </div>
+     {/* WhatsApp */}
+<div style={{ textAlign: "center", marginTop: "30px" }}>
+  <a
+    href="https://wa.me/4915901140879"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <button
+      style={{
+        padding: "12px 25px",
+        background: "green",
+        color: "white",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer"
+      }}
+    >
+      📱 Contact on WhatsApp
+    </button>
+  </a>
+</div>
 
       {/* Trial Class */}
       <div
@@ -204,7 +220,9 @@ function Classes() {
           New students can attend one free trial class before enrolling.
         </p>
 
-        <button>Book Trial Class</button>
+        <Link to="/contact">
+  <button>Book Trial Class</button>
+</Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -27,20 +28,24 @@ function Home() {
           Bharatanatyam, Yoga and Bhajan activities.
         </p>
 
-        <button
-          style={{
-            marginTop: "30px",
-            padding: "15px 30px",
-            background: "#f97316",
-            color: "white",
-            border: "none",
-            borderRadius: "8px",
-            fontSize: "18px",
-            cursor: "pointer"
-          }}
-        >
-          Explore Activities
-        </button>
+        
+        
+         <Link to="/enrichment">
+  <button
+    style={{
+      marginTop: "30px",
+      padding: "15px 30px",
+      background: "#f97316",
+      color: "white",
+      border: "none",
+      borderRadius: "8px",
+      fontSize: "18px",
+      cursor: "pointer"
+    }}
+  >
+    Explore Activities
+  </button>
+</Link>
       </div>
 
       {/* Activity Cards */}
@@ -374,6 +379,7 @@ function Home() {
     and become part of our creative community.
   </p>
 
+  <Link to="/classes">
   <button
     style={{
       padding: "12px 25px",
@@ -386,6 +392,7 @@ function Home() {
   >
     Register Now
   </button>
+</Link>
 </div>
     </div>
   );

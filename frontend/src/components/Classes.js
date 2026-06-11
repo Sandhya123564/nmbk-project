@@ -13,6 +13,9 @@ function Classes() {
       <h1 style={{ textAlign: "center" }}>
         NMBK Classes & Schedule
       </h1>
+      <p style={{ textAlign: "center", color: "#555" }}>
+  All class timings are in IST (Indian Standard Time).
+</p>
 
       {/* Yoga */}
       <div

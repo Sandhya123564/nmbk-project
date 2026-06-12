@@ -1,40 +1,88 @@
 import React, { useState } from "react";
 
 function ChatBot() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([
+    {
+      user: "Bot",
+      bot: "Hello! Welcome to NMBK 🤖"
+    }
+  ]);
+
   const [input, setInput] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const getReply = (text) => {
+    text = text.toLowerCase();
+
+    if (text.includes("yoga")) {
+      return "Yoga classes are available on Monday, Wednesday and Saturday (IST).";
+    } else if (text.includes("bharatanatyam")) {
+      return "Bharatanatyam classes are available for children, teens and adults.";
+    } else if (text.includes("bhajan")) {
+      return "Bhajan classes are held on Friday and Sunday.";
+    } else if (text.includes("contact")) {
+      return "You can contact us through the Contact page or WhatsApp.";
+    } else if (text.includes("fees")) {
+      return "Please contact NMBK for fee details.";
+    } else if (text.includes("trial")) {
+      return "A free trial class is available.";
+    } else if (text.includes("whatsapp")) {
+      return "Please use the WhatsApp button on our website.";
+    } else {
+      return "Please contact NMBK for more information.";
+    }
+  };
 
   const sendMessage = () => {
-    let reply = "Please contact NMBK for more information.";
+    if (input.trim() === "") return;
 
-    if (input.toLowerCase().includes("yoga")) {
-      reply = "Yoga classes are available on Monday, Wednesday and Saturday (IST).";
-    } else if (input.toLowerCase().includes("bharatanatyam")) {
-      reply = "Bharatanatyam classes are available for children, teens and adults.";
-    } else if (input.toLowerCase().includes("bhajan")) {
-      reply = "Bhajan classes are held on Friday and Sunday.";
-    } else if (input.toLowerCase().includes("contact")) {
-      reply = "You can contact us through the Contact page or WhatsApp.";
-    }
-    else if (input.toLowerCase().includes("fees")) {
-  reply = "Please contact NMBK for fee details.";
-}
-
-else if (input.toLowerCase().includes("trial")) {
-  reply = "A free trial class is available.";
-}
-
-else if (input.toLowerCase().includes("whatsapp")) {
-  reply = "Please use the WhatsApp button on our website.";
-}
+    const reply = getReply(input);
 
     setMessages([
       ...messages,
-      { user: input, bot: reply }
+      {
+        user: input,
+        bot: reply
+      }
     ]);
 
     setInput("");
   };
+
+  const quickMessage = (text) => {
+    const reply = getReply(text);
+
+    setMessages([
+      ...messages,
+      {
+        user: text,
+        bot: reply
+      }
+    ]);
+  };
+
+  if (!isOpen) {
+    return (
+      <button
+        onClick={() => setIsOpen(true)}
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          width: "60px",
+          height: "60px",
+          borderRadius: "50%",
+          background: "#1e3c72",
+          color: "white",
+          border: "none",
+          fontSize: "28px",
+          cursor: "pointer"
+        }}
+      >
+        🤖
+      </button>
+    );
+  }
 
   return (
     <div
@@ -42,32 +90,121 @@ else if (input.toLowerCase().includes("whatsapp")) {
         position: "fixed",
         bottom: "20px",
         right: "20px",
-        width: "300px",
+        width: "320px",
         background: "white",
         border: "1px solid gray",
         padding: "10px",
-        borderRadius: "10px"
+        borderRadius: "10px",
+        boxShadow: "0px 0px 10px rgba(0,0,0,0.3)"
       }}
     >
-      <h3>NMBK ChatBot 🤖</h3>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}
+      >
+        <h3>NMBK ChatBot 🤖</h3>
 
-      <div style={{ height: "200px", overflowY: "scroll" }}>
+        <button
+          onClick={() => setIsOpen(false)}
+          style={{
+            background: "red",
+            color: "white",
+            border: "none",
+            cursor: "pointer",
+            padding: "5px 8px"
+          }}
+        >
+          ❌
+        </button>
+      </div>
+
+      <div
+        style={{
+          height: "200px",
+          overflowY: "auto",
+          border: "1px solid #ddd",
+          padding: "5px",
+          marginBottom: "10px"
+        }}
+      >
         {messages.map((msg, index) => (
           <div key={index}>
-            <p><b>You:</b> {msg.user}</p>
-            <p><b>Bot:</b> {msg.bot}</p>
+            <p>
+              <b>You:</b> {msg.user}
+            </p>
+            <p>
+              <b>Bot:</b> {msg.bot}
+            </p>
+            <hr />
           </div>
         ))}
+      </div>
+
+      <div style={{ marginBottom: "10px" }}>
+        <button onClick={() => quickMessage("yoga")}>
+          🧘 Yoga
+        </button>
+
+        <button
+          onClick={() => quickMessage("bharatanatyam")}
+          style={{ marginLeft: "5px" }}
+        >
+          💃 Dance
+        </button>
+
+        <button
+          onClick={() => quickMessage("bhajan")}
+          style={{ marginLeft: "5px" }}
+        >
+          🎵 Bhajan
+        </button>
+
+        <button
+          onClick={() => quickMessage("contact")}
+          style={{ marginTop: "5px" }}
+        >
+          📞 Contact
+        </button>
+
+        <button
+          onClick={() => quickMessage("trial")}
+          style={{ marginLeft: "5px" }}
+        >
+          🎓 Trial
+        </button>
       </div>
 
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            sendMessage();
+          }
+        }}
         placeholder="Ask something..."
+        style={{
+          width: "100%",
+          padding: "8px",
+          marginBottom: "10px"
+        }}
       />
 
-      <button onClick={sendMessage}>
+      <button
+        onClick={sendMessage}
+        style={{
+          width: "100%",
+          padding: "10px",
+          background: "#1e3c72",
+          color: "white",
+          border: "none",
+          cursor: "pointer"
+        }}
+      >
         Send
       </button>
     </div>

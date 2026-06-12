@@ -11,6 +11,7 @@ import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Classes from "./components/Classes";
 import Services from "./components/Services";
+import ChatBot from "./components/ChatBot";
 function App() {
   return (
     <Router>
@@ -28,7 +29,9 @@ function App() {
       </Routes>
 
       <Footer />
+      <ChatBot/>
     </Router>
+  
   );
 }
 

@@ -88,9 +88,10 @@ function ChatBot() {
     <div
       style={{
         position: "fixed",
-        bottom: "20px",
-        right: "20px",
-        width: "320px",
+        bottom: "10px",
+        right: "10px",
+        width: "90%",
+        maxWidth: "320px",
         background: "white",
         border: "1px solid gray",
         padding: "10px",

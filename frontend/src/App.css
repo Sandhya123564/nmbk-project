@@ -11,3 +11,30 @@
   transform: scale(1.03);
   transition: 0.3s;
 }
+img{
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

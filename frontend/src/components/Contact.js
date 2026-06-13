@@ -8,41 +8,56 @@ function Contact() {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch(
-        "https://nmbk-project-1.onrender.com/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(formData)
-        }
-      );
+    const response = await fetch("https://nmbk-project-1.onrender.com/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
 
-      const data = await response.json();
-      alert(data.message);
-    } catch (error) {
-      console.log(error);
-      alert("Something went wrong!");
-    }
+    const data = await response.json();
+    alert(data.message);
   };
 
   return (
-    <div>
+    <div
+  style={{
+    minHeight: "100vh",
+    background: "#f8fafc",
+    padding: "40px"
+  }}
+>
+      <h2>Contact Us</h2>
+
       <form onSubmit={handleSubmit}>
-        <input name="name" onChange={handleChange} placeholder="Name" />
-        <input name="email" onChange={handleChange} placeholder="Email" />
-        <textarea name="message" onChange={handleChange} placeholder="Message" />
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <textarea
+          name="message"
+          placeholder="Message"
+          onChange={handleChange}
+          required
+        ></textarea><br /><br />
+
         <button type="submit">Send</button>
       </form>
     </div>

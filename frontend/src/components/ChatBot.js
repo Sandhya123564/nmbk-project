@@ -3,13 +3,13 @@ import React, { useState } from "react";
 function ChatBot() {
   const [messages, setMessages] = useState([
     {
-      user: "Bot",
-      bot: "Hello! Welcome to NMBK 🤖"
+      user: "",
+      bot: "👋 Hello! Welcome to NMBK.\nHow can I help you today?"
     }
   ]);
 
   const [input, setInput] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const getReply = (text) => {
     text = text.toLowerCase();
@@ -38,8 +38,8 @@ function ChatBot() {
 
     const reply = getReply(input);
 
-    setMessages([
-      ...messages,
+    setMessages((prev) => [
+      ...prev,
       {
         user: input,
         bot: reply
@@ -52,8 +52,8 @@ function ChatBot() {
   const quickMessage = (text) => {
     const reply = getReply(text);
 
-    setMessages([
-      ...messages,
+    setMessages((prev) => [
+      ...prev,
       {
         user: text,
         bot: reply
@@ -132,12 +132,16 @@ function ChatBot() {
       >
         {messages.map((msg, index) => (
           <div key={index}>
-            <p>
-              <b>You:</b> {msg.user}
-            </p>
+            {msg.user && (
+              <p>
+                <b>You:</b> {msg.user}
+              </p>
+            )}
+
             <p>
               <b>Bot:</b> {msg.bot}
             </p>
+
             <hr />
           </div>
         ))}

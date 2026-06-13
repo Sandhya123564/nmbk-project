@@ -14,7 +14,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:5000/contact", {
+    const response = await fetch("https://nmbk-project-1.onrender.com/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)

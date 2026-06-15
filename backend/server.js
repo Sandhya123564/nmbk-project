@@ -3,47 +3,33 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  requireTLS: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
-    subject: "New Contact Form Message - NMBK",
-    text: `
-Name: ${name}
-
-Email: ${email}
-
-Message:
-${message}
-    `,
-  };
-
   try {
-    await transporter.sendMail(mailOptions);
-    res.json({
-      success: true,
-      message: "Message sent successfully",
+    await resend.emails.send({
+      from: "NMBK Contact <onboarding@resend.dev>",
+      to: process.env.EMAIL_USER,
+      subject: "New Contact Form Message - NMBK",
+      html: `
+        <h3>New Message</h3>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Message:</b> ${message}</p>
+      `,
     });
+
+    res.json({ success: true, message: "Email sent successfully" });
+
   } catch (error) {
     console.log(error);
     res.status(500).json({
